@@ -111,11 +111,14 @@
       <div v-else class="empty-state">No classes scheduled on this date.</div>
     </div>
   </t-dialog>
+
+  <ConfigPopup />
 </template>
 
 <script lang="ts" setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useSettingsStore } from '@/stores/settings'
+import ConfigPopup from '@/components/ConfigPopup.vue'
 
 const settingsStore = useSettingsStore()
 
