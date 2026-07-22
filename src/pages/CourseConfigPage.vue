@@ -5,14 +5,14 @@
       visible
       content="Please select the courses you want to display. The data is only stored locally on this device, and not synced to other ones."
     />
-    <t-checkbox-group class="checkbox-group" v-model:value="settingsStore.slectedCourseList">
+    <t-checkbox-group class="checkbox-group" v-model:value="settingsStore.selectedCourseList">
       <div
         v-for="option in courseOptions"
         :key="option.value"
-        :class="`card ${settingsStore.slectedCourseList.includes(option.value) ? 'card--active' : ''}`"
+        :class="`card ${settingsStore.selectedCourseList.includes(option.value) ? 'card--active' : ''}`"
       >
         <t-icon
-          v-if="settingsStore.slectedCourseList.includes(option.value)"
+          v-if="settingsStore.selectedCourseList.includes(option.value)"
           :aria-hidden="true"
           class="card__icon"
           name="check"

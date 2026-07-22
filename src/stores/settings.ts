@@ -3,35 +3,36 @@ import { defineStore } from 'pinia'
 import currentCouseList from '@/courses/AY2526/T1/index.json'
 
 export const useSettingsStore = defineStore('settings', () => {
-  const slectedCourseList = ref<string[]>(currentCouseList.map((course) => course.code))
+  const selectedCourseList = ref<string[]>(currentCouseList.map((course) => course.code))
 
   const selectedCourseData = computed(() => {
-    return currentCouseList.filter((course) => slectedCourseList.value.includes(course.code))
+    return currentCouseList.filter((course) => selectedCourseList.value.includes(course.code))
   })
 
-  function initeSelectedCourseList() {
+  function initSelectedCourseList() {
     const storedCourseList = localStorage.getItem('selectedCourseList')
     if (storedCourseList) {
-      slectedCourseList.value = JSON.parse(storedCourseList)
+      selectedCourseList.value = JSON.parse(storedCourseList)
     }
   }
 
   function updateSelectedCourseList(newList: string[]) {
-    slectedCourseList.value = newList
+    selectedCourseList.value = newList
   }
 
+  initSelectedCourseList()
+
   watch(
-    slectedCourseList,
+    selectedCourseList,
     (newValue) => {
+      console.log('Selected course list updated:', newValue)
       localStorage.setItem('selectedCourseList', JSON.stringify(newValue))
     },
-    { deep: true, immediate: true },
+    { deep: true },
   )
 
-  initeSelectedCourseList()
-
   return {
-    slectedCourseList,
+    selectedCourseList,
     selectedCourseData,
     updateSelectedCourseList,
   }
