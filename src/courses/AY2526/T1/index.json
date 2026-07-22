@@ -1,0 +1,207 @@
+[
+  {
+    "code": "SC6101",
+    "title": "Introduction to Blockchain Technology - Part 1",
+    "type": "Core",
+    "instructor": "Prof. Li Yi",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Thursday",
+        "time": "18:30-21:45",
+        "dates": ["06/08"],
+        "venue": "LT25"
+      },
+      {
+        "day": "Thursday",
+        "time": "18:30-21:45",
+        "dates": ["13/08", "20/08", "27/08", "03/09", "10/09"],
+        "venue": "ABS LT6"
+      }
+    ]
+  },
+  {
+    "code": "SC6102",
+    "title": "Introduction to Blockchain Technology - Part 2",
+    "type": "Core",
+    "instructor": "Dr. Ernie Teo",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Tuesday",
+        "time": "18:30-21:45",
+        "dates": ["15/09", "22/09", "29/09", "06/10", "13/10", "20/10"],
+        "venue": "ABS LT6"
+      }
+    ]
+  },
+  {
+    "code": "SC6103",
+    "title": "Distributed Systems",
+    "type": "Core",
+    "instructor": "Prof. Tang Xueyan",
+    "academicUnits": 3,
+    "teachingHours": 39,
+    "schedule": [
+      {
+        "day": "Friday",
+        "time": "18:30-21:45",
+        "dates": ["14/08", "21/08", "28/08", "04/09"],
+        "venue": "LT18"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-12:15",
+        "dates": ["08/08", "12/09", "19/09", "03/10", "10/10"],
+        "venue": "LT18"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-12:15",
+        "dates": ["26/09", "17/10"],
+        "venue": "LT8"
+      },
+      {
+        "day": "Saturday",
+        "time": "13:15-16:30",
+        "dates": ["17/10"],
+        "venue": "LT8"
+      }
+    ]
+  },
+  {
+    "code": "SC6104",
+    "title": "Introduction to Cryptography",
+    "type": "Core",
+    "instructor": "Dr. Tay Kian Boon",
+    "academicUnits": 3,
+    "teachingHours": 39,
+    "schedule": [
+      {
+        "day": "Monday",
+        "time": "18:30-21:45",
+        "dates": ["03/08"],
+        "venue": "LT25"
+      },
+      {
+        "day": "Monday",
+        "time": "18:30-21:45",
+        "dates": [
+          "17/08",
+          "24/08",
+          "31/08",
+          "07/09",
+          "14/09",
+          "21/09",
+          "28/09",
+          "05/10",
+          "12/10",
+          "19/10"
+        ],
+        "venue": "ABS LT6"
+      },
+      {
+        "day": "Saturday",
+        "time": "14:00-17:15",
+        "dates": ["08/08"],
+        "venue": "LT5"
+      }
+    ]
+  },
+  {
+    "code": "SC6113",
+    "title": "Development of Decentralized Applications",
+    "type": "Elective",
+    "instructor": "Dr. Teoh Teik Toe",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Wednesday",
+        "time": "18:30-21:45",
+        "dates": ["05/08"],
+        "venue": "LT25"
+      },
+      {
+        "day": "Wednesday",
+        "time": "18:30-21:45",
+        "dates": ["16/09", "23/09", "30/09", "07/10", "14/10"],
+        "venue": "ABS LT6"
+      }
+    ]
+  },
+  {
+    "code": "SC6118",
+    "title": "Scalable Systems Architecture For Fintech",
+    "type": "Elective",
+    "instructor": "Mr. Alvin Song",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Wednesday",
+        "time": "18:30-21:45",
+        "dates": ["12/08", "19/08", "26/08", "02/09"],
+        "venue": "ABS LT6"
+      },
+      {
+        "day": "Saturday",
+        "time": "14:00-17:15",
+        "dates": ["26/09", "03/10"],
+        "venue": "ABS LT6"
+      }
+    ]
+  },
+  {
+    "code": "SC6122",
+    "title": "Emerging Topics in FinTech",
+    "type": "Elective",
+    "instructor": "Prof. Pun Chi Seng / Dr. Jin Song",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Tuesday",
+        "time": "18:30-21:45",
+        "dates": ["04/08"],
+        "venue": "LT25"
+      },
+      {
+        "day": "Tuesday",
+        "time": "18:30-21:45",
+        "dates": ["11/08", "18/08", "25/08", "01/09", "08/09"],
+        "venue": "ABS LT6"
+      }
+    ]
+  },
+  {
+    "code": "SC6128",
+    "title": "Pivot to AI Product Management with Blockchain Context",
+    "type": "Elective",
+    "instructor": "Dr. Chloe Gu",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Saturday",
+        "time": "10:00-13:00",
+        "dates": ["15/08", "29/08", "05/09"],
+        "venue": "LT12"
+      },
+      {
+        "day": "Saturday",
+        "time": "14:30-17:30",
+        "dates": ["15/08", "29/08", "05/09"],
+        "venue": "LT12"
+      },
+      {
+        "day": "Friday",
+        "time": "18:00-19:30",
+        "dates": ["11/09"],
+        "venue": "ABS LT6"
+      }
+    ]
+  }
+]
