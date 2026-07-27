@@ -1,6 +1,6 @@
 import { ref, watch, computed } from 'vue'
 import { defineStore } from 'pinia'
-import currentCouseList from '@/courses/AY2526/T1/index.json'
+import currentCouseList from '@/courses/AY2627/T1/index.json'
 
 export const useSettingsStore = defineStore('settings', () => {
   const selectedCourseList = ref<string[]>(currentCouseList.map((course) => course.code))

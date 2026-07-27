@@ -131,7 +131,7 @@ const stepList = [
 const doneCourses = ref<string[]>([])
 
 function _buildLink(courseCode: string) {
-  return `https://ntable.nero978.top/ics/AY2526/T1/${courseCode}.ics`
+  return `https://ntable.nero978.top/ics/AY2627/T1/${courseCode}.ics`
 }
 
 function _markedCourseDone(courseCode: string) {
