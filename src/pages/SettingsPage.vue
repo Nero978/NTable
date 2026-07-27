@@ -20,12 +20,7 @@
           <t-icon name="course" />
         </template>
       </t-cell>
-      <t-cell
-        title="Sync to My Phone"
-        arrow
-        hover
-        @click="MessagePlugin.info({ content: 'This feature is developing~', offset: [60, 16] })"
-      >
+      <t-cell title="Calendar Sync" arrow hover @click="$router.push('/settings/calendar-sync')">
         <template #left-icon>
           <t-icon name="mobile" />
         </template>
@@ -55,8 +50,6 @@
 </template>
 
 <script setup lang="ts">
-import { MessagePlugin } from 'tdesign-mobile-vue'
-
 function openLink(url: string) {
   window.open(url, '_blank')
 }

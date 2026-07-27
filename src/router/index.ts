@@ -16,6 +16,11 @@ const routes: RouteRecordRaw[] = [
     name: 'CourseConfig',
     component: () => import('../pages/CourseConfigPage.vue'),
   },
+  {
+    path: '/settings/calendar-sync',
+    name: 'CalendarSync',
+    component: () => import('../pages/CalendarSyncPage.vue'),
+  },
 ]
 
 const router = createRouter({
