@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import { useSettingsStore } from '@/stores/settings'
-import currentCouseList from '@/courses/AY2526/T1/index.json'
+import currentCouseList from '@/courses/AY2627/T1/index.json'
 
 const settingsStore = useSettingsStore()
 
