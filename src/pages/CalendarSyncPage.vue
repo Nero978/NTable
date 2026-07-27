@@ -143,6 +143,13 @@ function _markedCourseDone(courseCode: string) {
 }
 
 function subscribeLink(courseCode: string) {
+  const ua = navigator.userAgent.toLowerCase()
+  if (ua.includes('wechat') || ua.includes('micromessenger') || ua.includes('weixin')) {
+    MessagePlugin.error(
+      'Wechat does not support calendar subscription, please open this page in your browser to continue.',
+    )
+    return
+  }
   const link = _buildLink(courseCode).replace('https://', 'webcal://')
   window.open(link, '_blank')
   _markedCourseDone(courseCode)
