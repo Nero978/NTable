@@ -1,0 +1,223 @@
+[
+  {
+    "code": "SC6105",
+    "title": "Software Engineering",
+    "type": "Core",
+    "instructor": "Dr. Shen Zhiqi",
+    "academicUnits": 3,
+    "teachingHours": 39,
+    "schedule": [
+      {
+        "day": "Thursday",
+        "time": "18:30-21:45",
+        "dates": ["12/11"],
+        "venue": "ABS LT1"
+      },
+      {
+        "day": "Thursday",
+        "time": "18:30-21:45",
+        "dates": ["26/11", "03/12", "10/12"],
+        "venue": "LT3"
+      },
+      {
+        "day": "Tuesday",
+        "time": "18:30-21:45",
+        "dates": ["05/01", "12/01", "19/01", "26/01", "02/02", "09/02"],
+        "venue": "TBC"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-12:15",
+        "dates": ["21/11"],
+        "venue": "LT3"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-12:15",
+        "dates": ["12/12"],
+        "venue": "LT24"
+      }
+    ]
+  },
+  {
+    "code": "SC6106",
+    "title": "Blockchain Development Fundamentals - Part 1",
+    "type": "Core",
+    "instructor": "Dr. Teoh Teik Toe",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Friday",
+        "time": "18:30-21:45",
+        "dates": ["13/11"],
+        "venue": "ABS LT1"
+      },
+      {
+        "day": "Monday",
+        "time": "18:30-21:45",
+        "dates": ["16/11", "23/11", "07/12"],
+        "venue": "LT25"
+      },
+      {
+        "day": "Monday",
+        "time": "18:30-21:45",
+        "dates": ["30/11", "14/12"],
+        "venue": "LT29"
+      }
+    ]
+  },
+  {
+    "code": "SC6107",
+    "title": "Blockchain Development Fundamentals - Part 2",
+    "type": "Core",
+    "instructor": "Mr. Neil Han",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Thursday",
+        "time": "18:30-21:45",
+        "dates": ["07/01", "14/01", "21/01", "28/01", "04/02", "11/02"],
+        "venue": "TBC"
+      }
+    ]
+  },
+  {
+    "code": "SC6108",
+    "title": "Blockchain and Smart Contract Security",
+    "type": "Core",
+    "instructor": "Prof. Zhang Tianwei; Prof. Li Yi; Dr. Neiheiser Ray Willy",
+    "academicUnits": 3,
+    "teachingHours": 39,
+    "schedule": [
+      {
+        "day": "Wednesday",
+        "time": "18:30-21:45",
+        "dates": ["11/11"],
+        "venue": "ABS LT2"
+      },
+      {
+        "day": "Wednesday",
+        "time": "18:30-21:45",
+        "dates": ["18/11", "25/11", "02/12", "09/12", "16/12"],
+        "venue": "LT28"
+      },
+      {
+        "day": "Wednesday",
+        "time": "18:30-21:45",
+        "dates": ["13/01", "27/01", "10/02"],
+        "venue": "TBC"
+      },
+      {
+        "day": "Friday",
+        "time": "18:30-21:45",
+        "dates": ["08/01", "22/01"],
+        "venue": "TBC"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-12:15",
+        "dates": ["30/01"],
+        "venue": "TBC"
+      }
+    ]
+  },
+  {
+    "code": "SC6115",
+    "title": "Introduction to Cyber Security",
+    "type": "Elective",
+    "instructor": "Prof. Zhang Tianwei",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Tuesday",
+        "time": "18:30-21:45",
+        "dates": ["24/11", "01/12", "15/12"],
+        "venue": "LT3"
+      },
+      {
+        "day": "Monday",
+        "time": "18:30-21:45",
+        "dates": ["04/01", "11/01", "18/01"],
+        "venue": "TBC"
+      }
+    ]
+  },
+  {
+    "code": "SC6117",
+    "title": "Data Science Projects in Practice",
+    "type": "Elective",
+    "instructor": "Dr. Jack Tan",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Saturday",
+        "time": "14:00-17:15",
+        "dates": ["14/11", "05/12"],
+        "venue": "LT25"
+      },
+      {
+        "day": "Friday",
+        "time": "18:30-21:45",
+        "dates": ["20/11", "27/11", "04/12", "11/12"],
+        "venue": "LT25"
+      }
+    ]
+  },
+  {
+    "code": "SC6123",
+    "title": "Blockchain Business Applications",
+    "type": "Elective",
+    "instructor": "Dr. Yan Li",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Wednesday",
+        "time": "18:30-21:45",
+        "dates": ["06/01", "20/01", "03/02"],
+        "venue": "TBC"
+      },
+      {
+        "day": "Friday",
+        "time": "18:30-21:45",
+        "dates": ["15/01", "29/01", "12/02"],
+        "venue": "TBC"
+      }
+    ]
+  },
+  {
+    "code": "SC6126",
+    "title": "Computational Methods in Finance",
+    "type": "Elective",
+    "instructor": "Prof. Yan Zhenzhen",
+    "academicUnits": 1.5,
+    "teachingHours": 19.5,
+    "schedule": [
+      {
+        "day": "Saturday",
+        "time": "14:00-17:15",
+        "dates": ["09/01", "16/01", "23/01", "13/02"],
+        "venue": "TBC"
+      },
+      {
+        "day": "Monday",
+        "time": "18:30-21:45",
+        "dates": ["25/01", "01/02"],
+        "venue": "TBC"
+      }
+    ]
+  },
+  {
+    "code": "SC6131",
+    "title": "Blockchain Innovation Project",
+    "type": "Elective",
+    "instructor": "Dr. Teoh Teik Toe",
+    "academicUnits": 3,
+    "teachingHours": null,
+    "schedule": []
+  }
+]

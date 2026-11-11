@@ -1,5 +1,10 @@
 <template>
-  <t-navbar :fixed="true" left-arrow title="Calendar Sync" @left-click="$router.back()" />
+  <t-navbar
+    :fixed="true"
+    left-arrow
+    :title="`Calendar Sync · ${settingsStore.trimesterId}`"
+    @left-click="$router.back()"
+  />
   <div class="page-container">
     <div class="step-box">
       <t-steps v-model:current="currentStep">
@@ -43,7 +48,7 @@
       <div v-if="currentStep !== stepList.length - 1" class="course-view">
         <t-cell-group v-if="currentStep === 0" theme="card">
           <t-cell
-            title="Update Couese Config"
+            title="Update Course Config"
             arrow
             hover
             @click="$router.push('/settings/course-config')"
@@ -52,8 +57,12 @@
 
         <t-cell-group theme="card">
           <t-cell
-            v-for="(course, index) in settingsStore.selectedCourseData"
-            :key="index"
+            v-if="!scheduledCourses.length"
+            title="No selected courses have scheduled classes."
+          />
+          <t-cell
+            v-for="course in scheduledCourses"
+            :key="course.code"
             :title="course.code"
             :description="course.title"
           >
@@ -85,6 +94,7 @@
       </t-button>
       <t-button
         v-if="currentStep < stepList.length - 1"
+        :disabled="!scheduledCourses.length"
         theme="primary"
         @click="currentStep++"
         block
@@ -104,13 +114,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useSettingsStore } from '@/stores/settings'
 import { CourseIcon, CalendarEditIcon, TaskChecked1Icon } from 'tdesign-icons-vue-next'
 import { MessagePlugin } from 'tdesign-mobile-vue'
 
 const settingsStore = useSettingsStore()
 
+const scheduledCourses = computed(() =>
+  settingsStore.selectedCourseData.filter((course) => course.schedule.length > 0),
+)
 const currentStep = ref(0)
 const stepList = [
   {
@@ -131,7 +144,7 @@ const stepList = [
 const doneCourses = ref<string[]>([])
 
 function _buildLink(courseCode: string) {
-  return `https://ntable.nero978.top/ics/AY2627/T1/${courseCode}.ics`
+  return `https://ntable.nero978.top/ics/${settingsStore.trimester.calendarPath}/${courseCode}.ics`
 }
 
 function _markedCourseDone(courseCode: string) {

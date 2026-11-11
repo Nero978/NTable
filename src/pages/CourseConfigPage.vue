@@ -1,5 +1,10 @@
 <template>
-  <t-navbar :fixed="true" left-arrow title="Selected Courses Config" @left-click="$router.back()" />
+  <t-navbar
+    :fixed="true"
+    left-arrow
+    :title="`Courses · ${settingsStore.trimesterId}`"
+    @left-click="$router.back()"
+  />
   <div class="page-container">
     <t-notice-bar
       visible
@@ -31,19 +36,21 @@
 
 <script setup lang="ts">
 import { useSettingsStore } from '@/stores/settings'
-import currentCouseList from '@/courses/AY2627/T1/index.json'
+import { computed } from 'vue'
 
 const settingsStore = useSettingsStore()
 
-const courseOptions = currentCouseList.map((course) => {
-  return {
-    label: `${course.code} - ${course.title}`,
-    teacher: course.instructor,
-    type: course.type,
-    academicUnits: course.academicUnits,
-    value: course.code,
-  }
-})
+const courseOptions = computed(() =>
+  settingsStore.trimester.courses.map((course) => {
+    return {
+      label: `${course.code} - ${course.title}`,
+      teacher: course.instructor,
+      type: course.type,
+      academicUnits: course.academicUnits,
+      value: course.code,
+    }
+  }),
+)
 </script>
 
 <style scoped>

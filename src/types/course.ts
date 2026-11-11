@@ -11,9 +11,9 @@ export type CourseItem = {
   type: string
   instructor: string
   academicUnits: number
-  teachingHours: number
+  teachingHours: number | null
   schedule: CourseSchedule[]
-  courseAims: string
-  intendedLearningOutcomes: string[]
-  assessment: Array<{ component: string; weight: string; type: string }>
+  courseAims?: string
+  intendedLearningOutcomes?: string[]
+  assessment?: Array<{ component: string; weight: string; type: string }>
 }
