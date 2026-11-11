@@ -10,6 +10,23 @@
       visible
       content="Please select the courses you want to display. The data is only stored locally on this device, and not synced to other ones."
     />
+    <div class="selection-actions">
+      <t-button
+        theme="primary"
+        variant="outline"
+        :disabled="settingsStore.selectedCourseList.length === courseOptions.length"
+        @click="selectAllCourses"
+      >
+        Select all
+      </t-button>
+      <t-button
+        variant="outline"
+        :disabled="settingsStore.selectedCourseList.length === 0"
+        @click="settingsStore.selectedCourseList = []"
+      >
+        Deselect all
+      </t-button>
+    </div>
     <t-checkbox-group class="checkbox-group" v-model:value="settingsStore.selectedCourseList">
       <div
         v-for="option in courseOptions"
@@ -51,6 +68,10 @@ const courseOptions = computed(() =>
     }
   }),
 )
+
+function selectAllCourses() {
+  settingsStore.selectedCourseList = courseOptions.value.map((option) => option.value)
+}
 </script>
 
 <style scoped>
@@ -62,6 +83,13 @@ const courseOptions = computed(() =>
 
 .checkbox-group {
   margin-bottom: 5rem;
+}
+
+.selection-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px;
 }
 
 .card {
