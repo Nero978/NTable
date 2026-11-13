@@ -29,7 +29,7 @@
         title="Report Issues"
         arrow
         hover
-        @click="openLink('https:github.com/Nero978/NTable/issues')"
+        @click="openLink('https://github.com/Nero978/NTable/issues')"
       >
         <template #left-icon>
           <t-icon name="bug-report" />
