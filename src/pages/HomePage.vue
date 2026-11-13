@@ -3,9 +3,17 @@
     <div class="hero">
       <p class="eyebrow">NTU MSBT 2026 Aug Intake</p>
       <h1>Course Calendar</h1>
-      <t-dropdown-menu class="trimester-picker" aria-label="Trimester">
-        <t-dropdown-item v-model:value="settingsStore.trimesterId" :options="trimesterOptions" />
-      </t-dropdown-menu>
+      <label class="trimester-picker">
+        <span class="trimester-picker__label" aria-hidden="true">{{
+          settingsStore.trimester.label
+        }}</span>
+        <CaretDownSmallIcon class="trimester-picker__icon" aria-hidden="true" />
+        <select v-model="settingsStore.trimesterId" aria-label="Trimester">
+          <option v-for="option in trimesterOptions" :key="option.value" :value="option.value">
+            {{ option.label }}
+          </option>
+        </select>
+      </label>
     </div>
 
     <div class="btn-container">
@@ -126,6 +134,7 @@
 <script lang="ts" setup>
 import { ref, computed, watch } from 'vue'
 import type { TDate } from 'tdesign-mobile-vue'
+import { CaretDownSmallIcon } from 'tdesign-icons-vue-next'
 import { parseCourseDate, trimesters } from '@/courses/trimesters'
 import { useSettingsStore } from '@/stores/settings'
 import ConfigPopup from '@/components/ConfigPopup.vue'
@@ -306,12 +315,42 @@ h1 {
 }
 
 .trimester-picker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 1rem;
+  padding: var(--td-spacer-1, 12px) var(--td-spacer, 8px);
   border-radius: var(--td-button-border-radius, var(--td-radius-default, 6px));
+  background: var(--td-dropdown-menu-background, var(--td-bg-color-container));
+  color: var(--td-dropdown-menu-color, var(--td-text-color-primary));
 }
 
-.trimester-picker::after {
-  content: none;
+.trimester-picker:has(select:focus-visible) {
+  outline: 2px solid var(--td-brand-color);
+  outline-offset: 2px;
+}
+
+.trimester-picker__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--td-dropdown-menu-font, var(--td-font-body-medium));
+}
+
+.trimester-picker__icon {
+  flex: none;
+  margin-left: 4px;
+  font-size: var(--td-dropdown-menu-icon-size, 24px);
+}
+
+.trimester-picker select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .btn-container {
